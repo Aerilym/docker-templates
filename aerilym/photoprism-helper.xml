@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>PhotoPrism-Helper</Name>
+  <Repository>aerilym/photoprism-helper:master</Repository>
+  <Registry>https://hub.docker.com/r/aerilym/photoprism-helper/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/Aerilym/photoprism-helper/issues</Support>
+  <Project>https://github.com/Aerilym/photoprism-helper</Project>
+  <Overview>PhotoPrism Helper is an unofficial companion tool created for use alongside PhotoPrism. This project isn't associated with the PhotoPrism project, it's just a companion tool created to extend the functionality of PhotoPrism.</Overview>
+  <Category>Productivity: Tools: MediaApp:Photos</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/aerilym/docker-templates/master/aerilym/images/avatar.jpg</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1661054833</DateInstalled>
+  <DonateText>If you like my work please consider Donating.</DonateText>
+  <DonateLink>https://paypal.me/aerilym</DonateLink>
+  <Description>PhotoPrism Helper is an unofficial companion tool created for use alongside PhotoPrism. This project isn't associated with the PhotoPrism project, it's just a companion tool created to extend the functionality of PhotoPrism.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>2343</HostPort>
+        <ContainerPort>2343</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value>admin</Value>
+      <Name>PHOTOPRISM_USERNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>PHOTOPRISM_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>testkey</Value>
+      <Name>APIKEY</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>Melbourne/Australia</Value>
+      <Name>TIMEZONE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>300000</Value>
+      <Name>IMPORT_TIMEOUT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>AUTO_IMPORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>0 0 5 * * * *</Value>
+      <Name>AUTO_IMPORT_CRON</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>INDEX_AFTER_AUTO_IMPORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1</Value>
+      <Name>ISDOCKER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>logs/local.log</Value>
+      <Name>LOGFILE_PATH</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>info</Value>
+      <Name>LOGLEVEL_CONSOLE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>error</Value>
+      <Name>LOGLEVEL_FILE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>SEND_ERRORS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>ERROR_LOG_URL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>ERROR_LOG_KEY</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>ERROR_LOG_IDENTITY_ANONYMISED</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>ERROR_LOG_IDENTITY_SEND_OPTIONS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>EXTERNAL_LOG</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>info</Value>
+      <Name>EXTERNAL_LOG_DEPTH</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>EXTERNAL_LOG_URL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>EXTERNAL_LOG_KEY</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>EXTERNAL_LOG_IDENTITY_ANONYMISED</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>EXTERNAL_LOG_IDENTITY_SEND_OPTIONS</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Host Port" Target="2343" Default="2342" Mode="tcp" Description="The port the helper is hosted on. Container Port: 2343" Type="Port" Display="always" Required="true" Mask="false">2343</Config>
+  <Config Name="PhotoPrism Username" Target="PHOTOPRISM_USERNAME" Default="admin" Mode="" Description="The PhotoPrism username you want the helper to use for access." Type="Variable" Display="always" Required="false" Mask="false">admin</Config>
+  <Config Name="PhotoPrism Password" Target="PHOTOPRISM_PASSWORD" Default="" Mode="" Description="The PhotoPrism password associated with the username." Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Helper API Key" Target="APIKEY" Default="testkey" Mode="" Description="The API key you'll use to query the helper API." Type="Variable" Display="always" Required="true" Mask="false">testkey</Config>
+  <Config Name="Timezone" Target="TIMEZONE" Default="Melbourne/Australia" Mode="" Description="The timezone of your instance." Type="Variable" Display="always" Required="false" Mask="false">Melbourne/Australia</Config>
+  <Config Name="Import Timeout" Target="IMPORT_TIMEOUT" Default="300000" Mode="" Description="The number of milliseconds the import function should wait for a success message before timing out." Type="Variable" Display="always" Required="false" Mask="false">300000</Config>
+  <Config Name="Auto Import" Target="AUTO_IMPORT" Default="false" Mode="" Description="Enable/Disable the auto-import feature." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Auto Import Cron Schedule" Target="AUTO_IMPORT_CRON" Default="0 0 5 * * * *" Mode="" Description="The cron expression for when to run auto-import." Type="Variable" Display="always" Required="false" Mask="false">0 0 5 * * * *</Config>
+  <Config Name="Index After Auto Import" Target="INDEX_AFTER_AUTO_IMPORT" Default="false" Mode="" Description="Enable/Disable the index after auto-importing feature." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="ISDOCKER" Target="ISDOCKER" Default="1" Mode="" Description="Tells the helper instance if it is running in a Docker container. Container Variable: ISDOCKER" Type="Variable" Display="advanced" Required="true" Mask="false">1</Config>
+  <Config Name="Logfile Path" Target="LOGFILE_PATH" Default="logs/local.log" Mode="" Description="The logging file path." Type="Variable" Display="advanced-hide" Required="false" Mask="false">logs/local.log</Config>
+  <Config Name="Log Level - Console" Target="LOGLEVEL_CONSOLE" Default="info" Mode="" Description="The log level to apply to the console log." Type="Variable" Display="advanced-hide" Required="false" Mask="false">info</Config>
+  <Config Name="Log Level - File" Target="LOGLEVEL_FILE" Default="error" Mode="" Description="The log level to apply to the file log." Type="Variable" Display="advanced-hide" Required="false" Mask="false">error</Config>
+  <Config Name="Send Errors to the Developer" Target="SEND_ERRORS" Default="true" Mode="" Description="Enable/Disable sending errors/exceptions to the dev." Type="Variable" Display="advanced-hide" Required="false" Mask="false">true</Config>
+  <Config Name="Error Log URL (Dev)" Target="ERROR_LOG_URL" Default="" Mode="" Description="The URL to send errors to. (Don't change unless you're running your own fork of the helper)" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="Error Log Key (Dev)" Target="ERROR_LOG_KEY" Default="" Mode="" Description="The API key sent with error logs to the external server." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="Anonymise Error Logs" Target="ERROR_LOG_IDENTITY_ANONYMISED" Default="false" Mode="" Description="Enable/Disable anonymising externally sent error logs." Type="Variable" Display="advanced-hide" Required="false" Mask="false">false</Config>
+  <Config Name="Send Options in Error Log" Target="ERROR_LOG_IDENTITY_SEND_OPTIONS" Default="true" Mode="" Description="Enable/Disable sending your configuration options with externally sent errors." Type="Variable" Display="advanced-hide" Required="false" Mask="false">true</Config>
+  <Config Name="Add Logging to External Server" Target="EXTERNAL_LOG" Default="false" Mode="" Description="Enable/Disable sending logs to an external log server." Type="Variable" Display="advanced-hide" Required="false" Mask="false">false</Config>
+  <Config Name="External Log Depth" Target="EXTERNAL_LOG_DEPTH" Default="info" Mode="" Description="The log level to apply to the external log." Type="Variable" Display="advanced-hide" Required="false" Mask="false">info</Config>
+  <Config Name="External Log URL" Target="EXTERNAL_LOG_URL" Default="" Mode="" Description="The URL of the external log server." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="External Log API Key" Target="EXTERNAL_LOG_KEY" Default="" Mode="" Description="The API key sent with logs sent to the external log server." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="Anonymise External Logs" Target="EXTERNAL_LOG_IDENTITY_ANONYMISED" Default="false" Mode="" Description="Enable/Disable anonymising externally sent logs." Type="Variable" Display="advanced-hide" Required="false" Mask="false">false</Config>
+  <Config Name="Send Options in External Logs" Target="EXTERNAL_LOG_IDENTITY_SEND_OPTIONS" Default="true" Mode="" Description="Enable/Disable sending your configuration options with externally sent logs." Type="Variable" Display="advanced-hide" Required="false" Mask="false">true</Config>
+</Container>
