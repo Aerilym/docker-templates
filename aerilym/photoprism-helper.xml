@@ -13,7 +13,7 @@
   <Category>Productivity: Tools: MediaApp:Photos</Category>
   <WebUI/>
   <TemplateURL/>
-  <Icon>https://raw.githubusercontent.com/aerilym/docker-templates/master/aerilym/images/avatar.jpg</Icon>
+  <Icon>https://raw.githubusercontent.com/aerilym/docker-templates/master/aerilym/images/photoprism-helper.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
