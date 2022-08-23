@@ -79,6 +79,16 @@
       <Mode/>
     </Variable>
     <Variable>
+      <Value>false</Value>
+      <Name>AUTO_INDEX</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>0 0 5 * * * *</Value>
+      <Name>AUTO_INDEX_CRON</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
       <Value>1</Value>
       <Name>ISDOCKER</Name>
       <Mode/>
@@ -163,8 +173,10 @@
   <Config Name="Timezone" Target="TIMEZONE" Default="Australia/Melbourne" Mode="" Description="The timezone of your instance." Type="Variable" Display="always" Required="false" Mask="false">Australia/Melbourne</Config>
   <Config Name="Import Timeout" Target="IMPORT_TIMEOUT" Default="300000" Mode="" Description="The number of milliseconds the import function should wait for a success message before timing out." Type="Variable" Display="always" Required="false" Mask="false">300000</Config>
   <Config Name="Auto Import" Target="AUTO_IMPORT" Default="false" Mode="" Description="Enable/Disable the auto-import feature." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
-  <Config Name="Auto Import Cron Schedule" Target="AUTO_IMPORT_CRON" Default="0 0 5 * * * *" Mode="" Description="The cron expression for when to run auto-import." Type="Variable" Display="always" Required="false" Mask="false">0 0 5 * * * *</Config>
+  <Config Name="Auto Import Cron Schedule" Target="AUTO_IMPORT_CRON" Default="0 0 4 * * * *" Mode="" Description="The cron expression for when to run auto-import." Type="Variable" Display="always" Required="false" Mask="false">0 0 5 * * * *</Config>
   <Config Name="Index After Auto Import" Target="INDEX_AFTER_AUTO_IMPORT" Default="false" Mode="" Description="Enable/Disable the index after auto-importing feature." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Auto Index" Target="AUTO_INDEX" Default="false" Mode="" Description="Enable/Disable the auto-index feature." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Auto Index Cron Schedule" Target="AUTO_INDEX_CRON" Default="0 0 6 * * * *" Mode="" Description="The cron expression for when to run auto-index." Type="Variable" Display="always" Required="false" Mask="false">0 0 5 * * * *</Config>
   <Config Name="ISDOCKER" Target="ISDOCKER" Default="1" Mode="" Description="Tells the helper instance if it is running in a Docker container. Container Variable: ISDOCKER" Type="Variable" Display="advanced" Required="true" Mask="false">1</Config>
   <Config Name="Logfile Path" Target="LOGFILE_PATH" Default="logs/local.log" Mode="" Description="The logging file path." Type="Variable" Display="advanced-hide" Required="false" Mask="false">logs/local.log</Config>
   <Config Name="Log Level - Console" Target="LOGLEVEL_CONSOLE" Default="info" Mode="" Description="The log level to apply to the console log." Type="Variable" Display="advanced-hide" Required="false" Mask="false">info</Config>
