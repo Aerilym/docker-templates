@@ -34,6 +34,11 @@
   <Data/>
   <Environment>
     <Variable>
+      <Value>http://localhost:2342</Value>
+      <Name>PHOTOPRISM_SITE_URL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
       <Value>admin</Value>
       <Name>PHOTOPRISM_USERNAME</Name>
       <Mode/>
@@ -151,6 +156,7 @@
   </Environment>
   <Labels/>
   <Config Name="Host Port" Target="2343" Default="2342" Mode="tcp" Description="The port the helper is hosted on. Container Port: 2343" Type="Port" Display="always" Required="true" Mask="false">2343</Config>
+  <Config Name="PhotoPrism Site URL" Target="PHOTOPRISM_SITE_URL" Default="http://localhost:2342" Mode="" Description="Container Variable: PHOTOPRISM_SITE_URL" Type="Variable" Display="always" Required="false" Mask="false">http://localhost:2342</Config>
   <Config Name="PhotoPrism Username" Target="PHOTOPRISM_USERNAME" Default="admin" Mode="" Description="The PhotoPrism username you want the helper to use for access." Type="Variable" Display="always" Required="false" Mask="false">admin</Config>
   <Config Name="PhotoPrism Password" Target="PHOTOPRISM_PASSWORD" Default="" Mode="" Description="The PhotoPrism password associated with the username." Type="Variable" Display="always" Required="false" Mask="true"/>
   <Config Name="Helper API Key" Target="APIKEY" Default="testkey" Mode="" Description="The API key you'll use to query the helper API." Type="Variable" Display="always" Required="true" Mask="false">testkey</Config>
